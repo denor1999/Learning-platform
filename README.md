@@ -1,16 +1,41 @@
-# React + Vite
+# Учебная платформа для подбора лекторов
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Одностраничное веб-приложение (SPA) для подбора профессиональных лекторов, спикеров и тренеров. Платформа соединяет компании, образовательные учреждения и НКО с экспертами в различных областях знаний.
 
-Currently, two official plugins are available:
+Проект разработан в рамках лабораторной работы по дисциплине «Проектирование пользовательских интерфейсов».
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 📋 О проекте
 
-## React Compiler
+Приложение реализует учебную платформу, которая предоставляет онлайн и офлайн услуги по преподаванию дисциплин для физических и юридических лиц.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Основные возможности:
+- Каталог лекторов с подробной информацией: образование, стаж, учёная степень
+- Полный перечень преподаваемых дисциплин и тем
+- Прозрачные тарифы на занятия
+- Информация о партнёрах платформы
+- Отзывы клиентов и раздел FAQ
+- Форма обратной связи
 
-## Expanding the ESLint configuration
+Дизайн приложения повторяет предоставленный макет: сине-серая цветовая гамма, градиент в шапке, сетка карточек лекторов.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Технологии
+
+- **React 18** — библиотека для построения интерфейсов
+- **Vite** — сборщик и dev-сервер
+- **JavaScript (ES6+)** — язык программирования
+- **CSS3** — стилизация компонентов
+
+Приложение реализовано на **стандартной React-библиотеке без подключения сторонних UI-библиотек** (Material UI, Bootstrap, Ant Design и др.) — в соответствии с требованиями задания.
+
+## 🚀 Запуск проекта
+
+### Установка зависимостей
+
+```bash
+npm install
+```
+
+### Запуск в режиме разработки
+```bash
+npm run dev
+```
