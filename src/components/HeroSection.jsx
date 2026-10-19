@@ -1,10 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   return (
     <section id="home" className="hero-section">
       <div className="hero-container">
-        {/* Картинка лектора. Замени ссылку на свою или локальную из assets */}
         <img
           src="https://lh3.googleusercontent.com/d/12Sjk-QkLBTIIBHhn3XcpxoZCFBkAHAaE"
           alt="Лектор ведет занятие"
@@ -12,7 +12,7 @@ const HeroSection = () => {
         />
         <div className="hero-text-content">
           <h2>Наши лекторы — признанные специалисты в своих областях, готовые делиться опытом и знаниями.</h2>
-          <a href="#lecturers" className="hero-btn">НАЙТИ ЛЕКТОРА</a>
+          <Link to="/lecturers" className="hero-btn">НАЙТИ ЛЕКТОРА</Link>
         </div>
       </div>
     </section>

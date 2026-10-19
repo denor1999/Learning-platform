@@ -6,17 +6,31 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f7f9;
+  background-color: #ffffff;
   color: #1a365d;
   line-height: 1.6;
 }
 
 .App {
+  width: 100%;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+.page-container {
   max-width: 1200px;
   margin: 0 auto;
-  background-color: #ffffff;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-  min-height: 100vh;
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .section-title {
@@ -156,8 +170,8 @@ body {
 }
 
 .partners-section {
-  padding: 30px;
-  margin: 20px;
+  padding: 40px 0;
+  margin: 0;
 }
 
 .partners-grid {
@@ -215,8 +229,13 @@ body {
 }
 
 .lecturers-section {
-  padding: 30px;
-  margin: 20px;
+  padding: 40px 0;
+  margin: 0;
+}
+
+.lecturer-link {
+  text-decoration: none;
+  color: inherit;
 }
 
 .lecturers-grid {
@@ -258,6 +277,67 @@ body {
 .lecturer-card p {
   font-size: 12px;
   color: #718096;
+}
+
+.lecturer-detail-container {
+  padding: 30px;
+  margin: 20px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.back-btn {
+  background: none;
+  border: 1px solid #cbd5e0;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  color: #4a5568;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.back-btn:hover {
+  background: #edf2f7;
+  color: #2b6cb0;
+}
+
+.detail-photo {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.team-photo-placeholder {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e0 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 15px auto;
+  font-size: 50px;
+  color: #a0aec0;
+  border: 3px solid #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+@media (max-width: 1024px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+  .team-grid { grid-template-columns: 1fr; }
 }
 
 .modal-overlay {
@@ -413,8 +493,8 @@ body {
 }
 
 .how-it-works-section {
-  padding: 30px;
-  margin: 20px;
+  padding: 40px 0;
+  margin: 0;
 }
 
 .steps-grid {
@@ -499,8 +579,8 @@ body {
 .review-author span { font-size: 13px; color: #718096; }
 
 .faq-section {
-  padding: 30px;
-  margin: 20px;
+  padding: 40px 0;
+  margin: 0;
 }
 
 .faq-list {

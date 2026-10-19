@@ -1,54 +1,32 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
+import HomePage from './pages/HomePage';
+import LecturersPage from './pages/LecturersPage';
+import AboutPage from './pages/AboutPage';
+import LecturerDetailPage from './pages/LecturerDetailPage';
+import HowItWorksPage from './pages/HowItWorksPage';
+import PartnersPage from './pages/PartnersPage';
+import ReviewsPage from './pages/ReviewsPage';
+import FaqPage from './pages/FaqPage';
+import NotFound from './pages/NotFoundPage';
 import './App.css';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import HowItWorksSection from './components/HowItWorksSection';
-import ReviewsSection from './components/ReviewsSection';
-import PartnersSection from './components/PartnersSection';
-import LecturerCard from './components/LecturerCard';
-import LecturerModal from './components/LecturerModal';
-import FaqSection from './components/FaqSection';
-import Footer from './components/Footer';
-import { lecturersData } from './data/lecturersData';
 
 function App() {
-  const [selectedLecturer, setSelectedLecturer] = useState(null);
-
   return (
-    <div className="App">
-      <Header />
-
-      <main>
-        <HeroSection />
-        <AboutSection />
-        <HowItWorksSection />
-        <PartnersSection />
-
-        <section id="lecturers" className="lecturers-section">
-          <h2 className="section-title">Лекторы и лекции</h2>
-          <div className="lecturers-grid">
-            {lecturersData.map((lecturer) => (
-              <LecturerCard
-                key={lecturer.id}
-                lecturer={lecturer}
-                onClick={setSelectedLecturer}
-              />
-            ))}
-          </div>
-        </section>
-      </main>
-
-      <LecturerModal
-        lecturer={selectedLecturer}
-        onClose={() => setSelectedLecturer(null)}
-      />
-
-      <ReviewsSection />
-      <FaqSection />
-
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="lecturers" element={<LecturersPage />} />
+        <Route path="lecturers/:id" element={<LecturerDetailPage />} />
+        <Route path="about" element={<AboutPage />} />
+        <Route path="how-it-works" element={<HowItWorksPage />} />
+        <Route path="partners" element={<PartnersPage />} />
+        <Route path="reviews" element={<ReviewsPage />} />
+        <Route path="faq" element={<FaqPage />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
+    </Routes>
   );
 }
 
